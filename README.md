@@ -16,7 +16,7 @@ and provided by course instructors for this project at
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 The following steps were performed on the raw data by the script *run_analysis.R*:
--The training and test data files (*X_train.txt* and *X_test.txt*) were read and combined into a single data set.
+1. The training and test data files (*X_train.txt* and *X_test.txt*) were read and combined into a single data set.
 2. The list of features (types of measurements) were read from features.txt. A logical matrix identified the data points for mean and standard deviation by matching "mean()" and "std()". The variable "meanFreq()" was not included.
 3. The logical matrix with the desired variables was used to subset the data set that was combined in step 1.
 4. Variable names were cleaned up to be more readable and applied
