@@ -16,12 +16,12 @@ and provided by course instructors for this project at
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 The following steps were performed on the raw data by the script *run_analysis.R*:
-1. The training and test data files (*X_train.txt* and *X_test.txt*) were read and combined into a single data set.
-2. The list of features (types of measurements) were read from features.txt. A logical matrix identified the data points for mean and standard deviation by matching "mean()" and "std()". The variable "meanFreq()" was not included.
-3. The logical matrix with the desired variables was used to subset the data set that was combined in step 1.
-4. Variable names were cleaned up to be more readable and applied
-5. Activities and participants (subjects) were merged from the training and test data files the same way as data observations were in step 1. Activity numbers were changed to friendly activity names using actvity_labels.txt from the source material. Both activity and subjects were added to the data set as new columns and given descriptive column names.
-6. The file was written to tidy.csv
+ 1. The training and test data files (*X_train.txt* and *X_test.txt*) were read and combined into a single data set.
+ 2. The list of features (types of measurements) were read from features.txt. A logical matrix identified the data points for mean and standard deviation by matching "mean()" and "std()". The variable "meanFreq()" was not included.
+ 3. The logical matrix with the desired variables was used to subset the data set that was combined in step 1.
+ 4. Variable names were cleaned up to be more readable and applied.
+ 5. Activities and participants (subjects) were merged from the training and test data files the same way as data observations were in step 1. Activity numbers were changed to friendly activity names using actvity_labels.txt from the source material. Both activity and subjects were added to the data set as new columns and given descriptive column names.
+ 6. The file was written to tidy.csv
  
 
 
