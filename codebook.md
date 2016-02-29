@@ -2,6 +2,7 @@
 
 ## tidy.csv
 
+```
 1     subject
                     integer
                               The identifier for the research participant.
@@ -273,6 +274,6 @@
 68     fBodyGyroJerkMag-std
                     numeric
                               The standard deviation of the magnitude of the body jerk gyro signal (Fast Fourier Transform)
-
+```
 
 
