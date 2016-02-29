@@ -1,11 +1,11 @@
 # CleaningDataProject
 
 This repository includes:
-tidy.csv - a tidy data set of raw observations, described below
-tidy2.csv - a tidy data set of averages for each individual and activity, described below
-run_analysis.R - the script used to generate the two data sets
-codebook.md - a codebook describing the data in the two data sets
-README.md - this file
+* tidy.csv - a tidy data set of raw observations, described below
+* tidy2.csv - a tidy data set of averages for each individual and activity, described below
+* run_analysis.R - the script used to generate the two data sets
+* codebook.md - a codebook describing the data in the two data sets
+* README.md - this file
 
 
 ## tidy.csv
