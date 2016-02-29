@@ -24,14 +24,12 @@ mspos <- (mpos | spos)
 mds2 <- mds[,mspos]
 colnames(mds2) <- features$V2[mspos]
 
-# Remove the leading character from column names, parentheses, 
-# and the duplicate "BodyBody"
+# Remove , parentheses, 
+# the duplicate "BodyBody", and trailing ".1"
 for (i in seq_along(colnames(mds2))) {
-    if (grepl("BodyBody",colnames(mds2)[i])) 
-        colnames(mds2)[i] <- substring(colnames(mds2)[i],6)
-    else
-        colnames(mds2)[i] <- substring(colnames(mds2)[i],2)
     colnames(mds2)[i] <- gsub("\\(\\)", "", colnames(mds2)[i])
+    colnames(mds2)[i] <- gsub(".1", "", colnames(mds2)[i])
+    colnames(mds2)[i] <- gsub("BodyBody", "Body", colnames(mds2)[i])
 }
 
 # Read the training and test activity files, then merge the activities
@@ -45,14 +43,14 @@ mds_act <- mutate(mds_act, activity = act_names$V2[mds_act$V1])
 
 # Add activity names onto the merged data set
 mds3 <- cbind(mds_act$activity, mds2)
-colnames(mds3) <- c("activity", colnames(mds3[2:ncol(mds3)]))
+colnames(mds3) <- c("activity", colnames(mds3)[2:ncol(mds3)])
 
 # Read the participant IDs, merge them and append them on the data set
 train_ind <- read.csv("UCI HAR Dataset/train/subject_train.txt", header=FALSE, sep = "")
 test_ind <- read.csv("UCI HAR Dataset/test/subject_test.txt", header=FALSE, sep = "")
 mds_ind <- rbind(train_ind, test_ind)
 mds4 <- cbind(mds_ind, mds3)
-colnames(mds4) <- c("subject", colnames(mds4[2:ncol(mds4)]))
+colnames(mds4) <- c("subject", colnames(mds4)[2:ncol(mds4)])
 
 # Write the tidy data file
 write.csv(mds4,"tidy.csv", row.names=FALSE)
@@ -66,9 +64,9 @@ mds6 <- mds5 %>%
     group_by(subject, activity) %>%
     summarize_each(funs(mean))
 
-# Add "Avg" to column names
+# Add "Avg-" to column names
 for (i in 3:ncol(mds6)) {
-    colnames(mds6)[i] <- paste("Avg", colnames(mds6)[i], sep="")
+    colnames(mds6)[i] <- paste("Avg-", colnames(mds6)[i], sep="")
 }
 
 # Write the second tidy data set with the average of each variable
