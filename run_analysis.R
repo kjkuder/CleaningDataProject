@@ -70,4 +70,4 @@ for (i in 3:ncol(mds6)) {
 }
 
 # Write the second tidy data set with the average of each variable
-write.csv(mds6, "tidy2.csv", row.names = FALSE)
+write.table(mds6, "tidy2.csv", row.names = FALSE)
