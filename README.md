@@ -30,8 +30,8 @@ The following steps were performed on the raw data by the script *run_analysis.R
 The second file tidy2.csv shows the average of each data observation, grouped by subject and activity
 
 The following steps were performed as part of the script *run_analysis.R*:
-1. The file tidy.csv was read
-2. The data was grouped by subject and activity
-3. An average value for every data column not part of the grouping was created
-4. The column names were updated to include "Avg" at the beginning
-5. The file was written to tidy2.csv
+ 1. The file tidy.csv was read
+ 2. The data was grouped by subject and activity
+ 3. An average value for every data column not part of the grouping was created
+ 4. The column names were updated to include "Avg" at the beginning
+ 5. The file was written to tidy2.csv
