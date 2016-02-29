@@ -21,7 +21,7 @@ The following steps were performed on the raw data by the script *run_analysis.R
  3. The logical matrix with the desired variables was used to subset the data set that was combined in step 1.
  4. Variable names were cleaned up to be more readable and applied.
  5. Activities and participants (subjects) were merged from the training and test data files the same way as data observations were in step 1. Activity numbers were changed to friendly activity names using actvity_labels.txt from the source material. Both activity and subjects were added to the data set as new columns and given descriptive column names.
- 6. The file was written to tidy.csv
+ 6. The file was written to *tidy.csv*
  
 
 
@@ -34,4 +34,4 @@ The following steps were performed as part of the script *run_analysis.R*:
  2. The data was grouped by subject and activity
  3. An average value for every data column not part of the grouping was created
  4. The column names were updated to include "Avg" at the beginning
- 5. The file was written to tidy2.csv
+ 5. The file was written to *tidy2.csv*
