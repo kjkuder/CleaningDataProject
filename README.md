@@ -35,3 +35,4 @@ The following steps were performed as part of the script *run_analysis.R*:
  3. An average value for every data column not part of the grouping was created
  4. The column names were updated to include "Avg" at the beginning
  5. The file was written to *tidy2.csv*
+
