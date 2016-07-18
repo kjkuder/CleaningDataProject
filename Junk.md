@@ -1,4 +1,4 @@
-**Key requirements for system performance**
+# Key requirements for system performance
 
 |Category|Metric|Comments|
 |---|---|---|
@@ -29,7 +29,7 @@
 
 
 
-**Requirements for evaulating new tech components, reassessed as new components are introduced.**
+#Requirements for evaulating new tech components, reassessed as new components are introduced.
 
 |Category|Metric|Comments|
 |---|---|---|
