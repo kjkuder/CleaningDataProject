@@ -25,6 +25,10 @@
 
 
 
+
+
+
+
 **Requirements for evaulating new tech components, reassessed as new components are introduced.**
 
 |Category|Metric|Comments|
