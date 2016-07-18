@@ -1,3 +1,5 @@
+**Key requirements for system performance**
+
 |Category|Metric|Comments|
 |---|---|---|
 |*Response time*|< 100ms – Overall response to TSYS (round trip)|Rules, Card Controls and other components all must fit within overall response time|
@@ -20,3 +22,15 @@
 |*Operability*|n/a|Ability to get real-time performance metrics about the health of the system and the performance of the model|
 |*Maintainability*|n/a|Ability to introduce new models, features and data, and ability to modify rules without taking system down (“hot swap”)|
 |*Vendor viability*|n/a|Vendor remains viable, contracts include penalties for exiting the contract (including ceasing operations)|
+
+
+
+**Requirements for evaulating new tech components, reassessed as new components are introduced.**
+
+|Category|Metric|Comments|
+|---|---|---|
+|*Response time*|< 15ms – Model scoring|Rules, Card Controls and other components all must fit within overall response time|
+|*Capacity*|1000 authorizations per second, |Throttle TPS for testing|
+||sustainable for 36 hours||
+|*Open source*|n/a|Leverage open source technologies whenever possible|
+|*Cloud*|n/a|Leverage cloud-based computing services|
